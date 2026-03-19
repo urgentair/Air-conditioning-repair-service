@@ -15,61 +15,62 @@
             --neon-cyan: #00d4ff;
             --accent-red: #ff3131;
             --dark-bg: #050505;
-            /* Resolution control */
-            --max-width: 1200px; 
+            /* Extra Compact Resolution for Windows/Laptops */
+            --max-width: 1000px; 
         }
 
         * { margin: 0; padding: 0; box-sizing: border-box; }
         
+        /* Smooth Scrolling & Windows ClearType Optimization */
+        html { scroll-behavior: smooth; }
         body { 
-            font-family: 'Plus Jakarta Sans', sans-serif; 
+            font-family: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Arial, sans-serif; 
             background: var(--dark-bg); 
             color: white; 
             overflow-x: hidden;
-            scroll-behavior: smooth;
-            line-height: 1.6;
+            -webkit-font-smoothing: antialiased;
+            -moz-osx-font-smoothing: grayscale;
         }
 
-        /* --- HEADER (Resolution Adjusted) --- */
+        /* --- COMPACT HEADER --- */
         .main-header {
             position: fixed;
             top: 0; width: 100%; z-index: 1000;
-            background: rgba(5, 5, 5, 0.9);
-            backdrop-filter: blur(12px);
-            border-bottom: 1px solid rgba(255, 255, 255, 0.08);
-            padding: 12px 0;
+            background: rgba(5, 5, 5, 0.95);
+            backdrop-filter: blur(10px);
+            border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+            padding: 10px 0;
         }
 
         .header-container {
             max-width: var(--max-width); 
             margin: 0 auto; 
-            padding: 0 20px;
+            padding: 0 25px;
             display: flex; 
             justify-content: space-between; 
             align-items: center;
         }
 
-        .logo img { height: 42px; transition: 0.3s; }
-        .logo:hover img { transform: scale(1.05); }
+        .logo img { height: 38px; transition: 0.3s; }
 
-        .nav-links ul { display: flex; list-style: none; gap: 25px; }
+        .nav-links ul { display: flex; list-style: none; gap: 20px; }
         .nav-links a { 
             text-decoration: none; color: rgba(255,255,255,0.7); 
-            font-weight: 700; font-size: 0.8rem; 
-            text-transform: uppercase; letter-spacing: 1px; transition: 0.3s;
+            font-weight: 700; font-size: 0.75rem; 
+            text-transform: uppercase; letter-spacing: 1px; transition: 0.2s;
         }
         .nav-links a:hover { color: var(--primary-blue); }
         .nav-contact { 
             color: var(--accent-red) !important; 
             border: 1px solid var(--accent-red); 
-            padding: 6px 14px; 
-            border-radius: 6px; 
+            padding: 5px 12px; 
+            border-radius: 4px; 
         }
 
-        /* --- HERO SECTION (Resolution Adjusted) --- */
+        /* --- HERO SECTION (Compact Layout) --- */
         .hero-v4 {
-            height: 100vh; 
-            min-height: 700px;
+            height: 90vh; 
+            min-height: 600px;
             width: 100%; 
             position: relative;
             background: url('https://www.cabotcorp.com/-/media/deploy-041320/responsibility-resources-promo-jpg.jpg?rev=07c6b241dfb1476c9d72d3d8fdc79211&w=1170&hash=082633E266F1528846FE47ECB8FECDD2') center/cover no-repeat;
@@ -79,7 +80,7 @@
 
         .hero-v4::before {
             content: ''; position: absolute; inset: 0;
-            background: linear-gradient(90deg, #050505 40%, rgba(5, 5, 5, 0.2) 100%);
+            background: linear-gradient(90deg, #050505 50%, rgba(5, 5, 5, 0.1) 100%);
             z-index: 1;
         }
 
@@ -87,89 +88,92 @@
             max-width: var(--max-width);
             margin: 0 auto;
             width: 100%;
-            padding: 0 20px;
+            padding: 0 25px;
             position: relative;
             z-index: 2;
         }
 
-        .hero-content { max-width: 650px; }
+        .hero-content { max-width: 580px; }
 
         .status-badge {
             display: inline-flex; align-items: center;
-            background: rgba(0, 112, 243, 0.1);
-            border: 1px solid rgba(0, 112, 243, 0.3);
-            padding: 8px 16px; border-radius: 50px;
-            color: var(--neon-cyan); font-size: 0.7rem; font-weight: 800;
-            letter-spacing: 1px; margin-bottom: 25px;
+            background: rgba(0, 112, 243, 0.15);
+            border: 1px solid rgba(0, 112, 243, 0.4);
+            padding: 6px 14px; border-radius: 4px;
+            color: var(--neon-cyan); font-size: 0.65rem; font-weight: 800;
+            letter-spacing: 1px; margin-bottom: 20px;
             text-transform: uppercase;
         }
 
         .pulse-dot {
             width: 6px; height: 6px; background: var(--neon-cyan);
-            border-radius: 50%; margin-right: 10px;
+            border-radius: 50%; margin-right: 8px;
             box-shadow: 0 0 10px var(--neon-cyan);
             animation: pulse-glow 2s infinite;
         }
 
         @keyframes pulse-glow {
             0% { transform: scale(0.9); opacity: 1; }
-            70% { transform: scale(2); opacity: 0; }
+            70% { transform: scale(1.8); opacity: 0; }
             100% { transform: scale(0.9); opacity: 0; }
         }
 
         .hero-title {
             font-family: 'Outfit', sans-serif; 
-            font-size: clamp(2.5rem, 6vw, 4.2rem);
-            line-height: 1.05; font-weight: 800; color: #fff; margin-bottom: 20px;
+            font-size: clamp(2.2rem, 5vw, 3.5rem);
+            line-height: 1.1; font-weight: 800; color: #fff; margin-bottom: 15px;
+            letter-spacing: -1px;
         }
 
         .text-glow {
             background: linear-gradient(90deg, #0070f3, #00d4ff);
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
-            filter: drop-shadow(0 0 10px rgba(0, 112, 243, 0.3));
+            filter: drop-shadow(0 0 8px rgba(0, 112, 243, 0.4));
         }
 
         .hero-subtitle {
-            font-size: 1.1rem; color: rgba(255,255,255,0.7);
-            margin-bottom: 35px; max-width: 500px;
+            font-size: 1rem; color: rgba(255,255,255,0.6);
+            margin-bottom: 30px; max-width: 450px;
+            line-height: 1.5;
         }
 
-        .cta-box { display: flex; gap: 15px; }
+        .cta-box { display: flex; gap: 12px; }
 
         .btn-neon {
             background: var(--primary-blue); color: #fff;
-            padding: 16px 32px; border-radius: 10px; text-decoration: none;
-            font-weight: 800; font-size: 0.95rem;
-            box-shadow: 0 8px 25px rgba(0, 112, 243, 0.3);
+            padding: 14px 28px; border-radius: 8px; text-decoration: none;
+            font-weight: 800; font-size: 0.9rem;
+            box-shadow: 0 5px 15px rgba(0, 112, 243, 0.3);
             transition: 0.3s ease;
         }
 
-        .btn-neon:hover { transform: translateY(-3px); background: #005ecb; }
+        .btn-neon:hover { transform: translateY(-2px); background: #005ecb; box-shadow: 0 8px 20px rgba(0, 112, 243, 0.4); }
 
         .btn-outline {
             border: 1px solid rgba(255,255,255,0.2); color: #fff;
-            padding: 16px 32px; border-radius: 10px; text-decoration: none;
-            font-weight: 700; transition: 0.3s; font-size: 0.95rem;
+            padding: 14px 28px; border-radius: 8px; text-decoration: none;
+            font-weight: 700; transition: 0.3s; font-size: 0.9rem;
         }
 
-        .btn-outline:hover { background: rgba(255,255,255,0.05); }
+        .btn-outline:hover { background: rgba(255,255,255,0.05); border-color: white; }
 
         .hero-trust {
-            display: flex; gap: 30px; margin-top: 50px;
-            border-top: 1px solid rgba(255,255,255,0.1); padding-top: 25px;
+            display: flex; gap: 25px; margin-top: 40px;
+            border-top: 1px solid rgba(255,255,255,0.1); padding-top: 20px;
         }
 
-        .trust-item strong { display: block; font-size: 1.3rem; color: #fff; }
-        .trust-item span { font-size: 0.7rem; color: rgba(255,255,255,0.4); text-transform: uppercase; }
+        .trust-item strong { display: block; font-size: 1.2rem; color: #fff; }
+        .trust-item span { font-size: 0.65rem; color: rgba(255,255,255,0.4); text-transform: uppercase; font-weight: 700; }
 
         @media (max-width: 768px) {
             .nav-links { display: none; }
+            .hero-v4 { height: auto; padding: 120px 0 60px; }
             .hero-wrapper { text-align: center; }
             .hero-content { margin: 0 auto; }
             .cta-box { flex-direction: column; align-items: center; }
             .hero-trust { justify-content: center; }
-            .btn-neon, .btn-outline { width: 100%; max-width: 280px; }
+            .btn-neon, .btn-outline { width: 100%; max-width: 260px; }
         }
     </style>
 </head>
@@ -196,7 +200,7 @@
             <div class="hero-content">
                 <div class="status-badge">
                     <span class="pulse-dot"></span>
-                    24/7 Emergency AC Service in Davie
+                    24/7 HVAC Experts in Davie
                 </div>
                 
                 <h1 class="hero-title">
@@ -205,7 +209,7 @@
                 </h1>
                 
                 <p class="hero-subtitle">
-                    Stop struggling with the heat. Our licensed Davie experts provide 60-minute emergency response to get your AC running perfectly.
+                    Fast 60-minute emergency response to get your AC running perfectly. Licensed Davie professionals you can count on.
                 </p>
                 
                 <div class="cta-box">
