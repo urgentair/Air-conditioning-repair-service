@@ -51,7 +51,32 @@
             align-items: center;
         }
 
-        .logo img { height: 38px; transition: 0.3s; }
+        /* Business Name + Logo Wrapper */
+        .logo-wrapper {
+            display: flex;
+            align-items: center;
+            text-decoration: none;
+            gap: 12px;
+        }
+
+        .logo-wrapper img { 
+            height: 38px; 
+            width: auto;
+            transition: 0.3s; 
+        }
+
+        .brand-text {
+            font-family: 'Outfit', sans-serif;
+            color: white;
+            font-size: 1.1rem;
+            font-weight: 800;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+        }
+
+        .brand-text span {
+            color: var(--primary-blue);
+        }
 
         .nav-links ul { display: flex; list-style: none; gap: 20px; }
         .nav-links a { 
@@ -67,7 +92,7 @@
             border-radius: 4px; 
         }
 
-        /* --- HERO SECTION (Compact Layout) --- */
+        /* --- HERO SECTION --- */
         .hero-v4 {
             height: 90vh; 
             min-height: 600px;
@@ -174,6 +199,8 @@
             .cta-box { flex-direction: column; align-items: center; }
             .hero-trust { justify-content: center; }
             .btn-neon, .btn-outline { width: 100%; max-width: 260px; }
+            .brand-text { font-size: 0.9rem; }
+            .logo-wrapper img { height: 32px; }
         }
     </style>
 </head>
@@ -181,8 +208,9 @@
 
     <header class="main-header">
         <div class="header-container">
-            <a href="#" class="logo">
+            <a href="#" class="logo-wrapper">
                 <img src="https://filemanager.my3pod.com/users/y3VwHWlbmaGHgS0NFocIIfijB41Un9xP/site_FulFVS/main/logo-lbanco-sec-sin-fondo-copia-23x--copia-6yrx.webp" alt="Urgent Air Care Logo">
+                <span class="brand-text">Urgent <span>Air Care</span></span>
             </a>
             <nav class="nav-links">
                 <ul>
