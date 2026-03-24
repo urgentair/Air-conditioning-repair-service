@@ -1172,10 +1172,175 @@ professional HVAC repair and maintenance services
 }
 </style>
 <footer id="contact" class="footer-premium-v11">
+    <style>
+        /* FIXED FOOTER CSS */
+        .footer-premium-v11 {
+            background: #050505;
+            padding: 80px 20px 0;
+            border-top: 1px solid rgba(255,255,255,0.05);
+            color: #fff;
+            font-family: 'Plus Jakarta Sans', sans-serif;
+        }
+
+        .footer-main-wrapper {
+            max-width: 1000px; /* Windows/Laptop Optimization */
+            margin: 0 auto;
+        }
+
+        .footer-brand-header {
+            text-align: center;
+            margin-bottom: 50px;
+        }
+
+        .footer-logo-wrap {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 15px;
+            margin-bottom: 12px;
+        }
+
+        .footer-logo-main {
+            height: 45px;
+            width: auto;
+            filter: drop-shadow(0 0 10px rgba(0, 112, 243, 0.2));
+        }
+
+        .footer-brand-name {
+            font-family: 'Outfit', sans-serif;
+            font-size: 1.6rem;
+            font-weight: 800;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        .footer-brand-name span { color: #0070f3; }
+
+        .logo-underline {
+            width: 60px;
+            height: 3px;
+            background: #0070f3;
+            margin: 0 auto;
+            border-radius: 10px;
+            box-shadow: 0 0 10px #0070f3;
+        }
+
+        .footer-grid {
+            display: grid;
+            grid-template-columns: 1.2fr 0.8fr;
+            gap: 40px;
+            padding-bottom: 60px;
+        }
+
+        .footer-card {
+            background: rgba(255, 255, 255, 0.02);
+            border: 1px solid rgba(255, 255, 255, 0.05);
+            padding: 35px;
+            border-radius: 20px;
+            backdrop-filter: blur(10px);
+        }
+
+        .footer-heading {
+            font-family: 'Outfit', sans-serif;
+            font-size: 2rem;
+            font-weight: 800;
+            margin-bottom: 15px;
+            line-height: 1.1;
+        }
+
+        .blue-text { color: #0070f3; }
+
+        .footer-subtext { 
+            color: #888; 
+            font-size: 0.95rem; 
+            margin-bottom: 30px; 
+            line-height: 1.6; 
+        }
+
+        .contact-links-box { margin-bottom: 25px; }
+
+        .c-row { 
+            display: flex; 
+            align-items: center; 
+            gap: 15px; 
+            margin-bottom: 20px; 
+        }
+
+        .c-icon { font-size: 1.2rem; }
+
+        .c-content label { 
+            display: block; 
+            font-size: 0.65rem; 
+            color: #ff3131; 
+            font-weight: 800; 
+            letter-spacing: 1.2px; 
+            margin-bottom: 2px;
+        }
+
+        .c-content a, .c-content span { 
+            font-size: 1rem; 
+            color: #fff; 
+            text-decoration: none; 
+            font-weight: 700; 
+        }
+
+        .footer-cta-btn {
+            display: flex; 
+            justify-content: space-between; 
+            align-items: center;
+            background: #fff; 
+            color: #000;
+            padding: 16px 20px; 
+            border-radius: 10px; 
+            text-decoration: none; 
+            font-weight: 800; 
+            font-size: 0.8rem;
+            transition: 0.3s;
+        }
+
+        .footer-cta-btn:hover { transform: translateY(-3px); box-shadow: 0 10px 20px rgba(255,255,255,0.1); }
+
+        .map-neon-frame { 
+            width: 100%; 
+            height: 350px; 
+            border-radius: 20px; 
+            overflow: hidden; 
+            border: 1px solid rgba(0, 112, 243, 0.2); 
+        }
+
+        .map-neon-frame iframe { 
+            filter: invert(90%) hue-rotate(180deg) contrast(90%); 
+        }
+
+        .footer-legal-bar { 
+            border-top: 1px solid rgba(255, 255, 255, 0.03); 
+            padding: 30px 0; 
+            text-align: center; 
+        }
+
+        .legal-container { 
+            color: #555; 
+            font-size: 0.7rem; 
+            font-weight: 800; 
+            display: flex; 
+            justify-content: center; 
+            gap: 15px; 
+            letter-spacing: 1px;
+        }
+
+        .separator { color: #222; }
+
+        @media (max-width: 850px) {
+            .footer-grid { grid-template-columns: 1fr; gap: 30px; }
+            .footer-logo-wrap { flex-direction: column; text-align: center; gap: 5px; }
+            .footer-brand-name { font-size: 1.2rem; }
+            .footer-heading { font-size: 1.6rem; }
+        }
+    </style>
+
     <div class="footer-main-wrapper">
-        
         <div class="footer-brand-header">
-            <div class="footer-logo-wrapper">
+            <div class="footer-logo-wrap">
                 <img src="https://filemanager.my3pod.com/users/y3VwHWlbmaGHgS0NFocIIfijB41Un9xP/site_FulFVS/main/logo-lbanco-sec-sin-fondo-copia-23x--copia-6yrx.webp" alt="Urgent Air Care Logo" class="footer-logo-main">
                 <span class="footer-brand-name">Urgent <span>Air Care</span></span>
             </div>
@@ -1219,7 +1384,7 @@ professional HVAC repair and maintenance services
 
             <div class="footer-map-container">
                 <div class="map-neon-frame">
-                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m2!1m3!1d3583.50444317182!2d-80.2647!3d26.0825!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x88d9a9a5f78c8f9b%3A0x2a1c6e1e1e1e1e1e!2s1965%20SW%2086th%20Ave%2C%20Davie%2C%20FL%2033324!5e0!3m2!1sen!2sus!4v1711280000000!5m2!1sen!2sus" width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3583.123456789012!2d-80.26234567890123!3d26.07456789012345!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x88d9a9096983%3A0x1234567890abcdef!2s1965%20SW%2086th%20Ave%2C%20Davie%2C%20FL%2033324!5e0!3m2!1sen!2sus!4v1234567890123" width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
                 </div>
             </div>
         </div>
